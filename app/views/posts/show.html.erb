@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<div class="container"  style="width: 70%;">
+  <div class="col-md-12">
+    <div class="panel panel-default">
+  		<div class="panel-heading">
+        <h2><%= @post.title %></h2>
+      </div>
+  		<div class="panel-body wordwrap">
+        <h3><p class=""><%= raw(@post.content) %></p></h3>
+      </div>
+    </div>
+  </div>
+  <a href="<%=edit_post_path(@post)%>" class='btn btn-default'>Edit</a>
+</div>  

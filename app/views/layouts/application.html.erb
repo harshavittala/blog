@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <style type="text/css">
+      a:hover {
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body class="" style="padding-top: 80px;">
+    
+        <div class="navbar navbar-default navbar-fixed-top" style="background-color: white;">
+          <div class="container">
+            <div class="col-md-3"></div>
+            <div class="col-xs-10 col-md-6">
+              <a href="<%=posts_path%>"><h2 class="text-center" style="color: black;">NightHack Blog</h2></a>
+            </div>
+            <div class="col-xs-2 col-md-3">
+              <a href="<%= new_post_path %>" class="btn btn-default navbar-btn navbar-right btn-xs" style='color: #267326; text-decoration:none;background-color: white;'>New Post</a>
+            </div>
+          </div>    
+        </div>
+        
+    	<div class='row'>
+       <!-- <div class="col-md-2">
+        </div>
+        <div class="col-md-8"> -->
+          
+        <!--</div> 
+        <div class="col-md-2">
+        </div> -->
+      </div>  
+    <%= yield %>
+  </body>
+</html>

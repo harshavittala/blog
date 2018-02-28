@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<% if @count%1==0 %>
+  <% @posts.each do |p| %>
+    <div class="col-sm-6 col-md-4">
+      <a href="<%= post_path(p) %>">
+        <div class="thumbnail" style="height: 150px; overflow: hidden; ">
+          <div class="caption" style="height: 50%;">
+            <h4><%= p.title %></h4>
+            <h6>by</h6><hr>
+            <h5><p class="wordwrap"><%= raw(p.content) %></p></h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% end %>
+<% end  %>
+

@@ -1,0 +1,15 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  username: root
+  password: root
+  database: blog
+
+development:
+  <<: *default
+
+test:
+  <<: *default
+
+production:
+  <<: *default
